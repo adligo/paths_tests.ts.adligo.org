@@ -152,6 +152,12 @@ export function runPathsTests() {
         ac.same('foo',parts5[4]);
         ac.same(p5s, p5.toPathString());
         ac.same('Path [parts=..,..,..,src,foo, relative=true, windows=true]', p5.toString());
+      }),
+      new Test('testNormalizeSpaceError', (ac) => {
+        let paths: Paths = new Paths();
+        // a more complex relative path
+        let p5s = 'some dir';
+        ac.error(Paths.SPACES_NOT_ALLOWED_ERROR + p5s, () => paths.normalize(p5s));
       })
     ])
   ]).run();
