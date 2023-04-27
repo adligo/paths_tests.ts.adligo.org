@@ -1,0 +1,38 @@
+{
+    "author": "Scott Morgan",
+    "bugs": {
+        "url": "https://github.com/adligo/paths_tests.ts.adligo.org/issues"
+    },
+    "description": "This project contains interfaces for the paths.ts.adligo.org (filesystem paths APIs for windows and unix).",
+    "dependencySrcSLinks": [
+        {  "project": "i_obj.ts.adligo.org" },
+        {  "project": "i_strings.ts.adligo.org" },
+        { "project": "i_paths.ts.adligo.org" },
+        { "project": "paths.ts.adligo.org" },
+        { "project": "tests4j.ts.adligo.org" }
+    ],
+    "homepage": "https://github.com/adligo/paths_tests.ts.adligo.org#readme",
+    "keywords": [
+        "paths"
+    ],
+    "license": "Apache-2.0",
+    "nyc": {
+        "include": [
+            "src/paths.ts.adligo.org@slink"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adligo/paths_tests.ts.adligo.org.git"
+    },
+    "scripts": {
+        "test-all": "ts-node src/paths_tests.mts",
+        "test-all-with-coverage": "echo did it instrument?"
+    },
+    "type": "module",
+    "version": "0.0.1",
+    "devDependencies": {
+        "ts-node": "^10.9.1",
+        "ts-node-register": "^1.0.0"
+    }
+}
