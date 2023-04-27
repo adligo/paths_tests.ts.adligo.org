@@ -160,7 +160,7 @@ export function runPathsTests() {
         ac.error(Paths.SPACES_NOT_ALLOWED_ERROR + p5s, () => paths.normalize(p5s));
       })
     ])
-  ]).run();
+  ]).run().printTextReport();
   console.log('paths tests finished');
 }
 
